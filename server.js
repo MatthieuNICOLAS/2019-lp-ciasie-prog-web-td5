@@ -27,6 +27,8 @@ wss.on("connection", function (ws) {
     })
 })
 
+app.use(express.static("public"))
+
 app.get("/", function (req, res) {
     res.sendFile("./index.html", { root: "." })
 })
